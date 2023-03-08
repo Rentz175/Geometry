@@ -10,7 +10,7 @@ import geometry.ruang.MenghitungRuang;
  *
  * @author Febrian
  */
-public class Keratan extends Bola implements MenghitungRuang {
+public class Keratan extends Bola{
     private double tinggi;
     
     public Keratan(double jarijari, double tinggi) {
@@ -23,8 +23,8 @@ public class Keratan extends Bola implements MenghitungRuang {
 //        
 //    }
 
-    @Override
-    public double luaspermukaan() {
+//    @Override
+    public double luaspermukaanKeratan() {
         return super.keliling()*tinggi;
     }
     

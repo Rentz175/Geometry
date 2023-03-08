@@ -4,29 +4,28 @@
  */
 package geometry.ruang.kerucut;
 
-import geometry.ruang.MenghitungRuang;
 
 /**
  *
  * @author Febrian
  */
-public class KerucutTerpancung extends Kerucut implements MenghitungRuang {
-    private double jarijaritutup, tinggitutup, sisitutup;
+public class KerucutTerpancung extends Kerucut {
+    private double jarijaritutup, tinggitutup;
 
-    public KerucutTerpancung(double jarijaritutup, double tinggitutup, double sisitutup, double tinggi, double sisi, double jarijari) {
-        super(tinggi, sisi, jarijari);
+    public KerucutTerpancung(double jarijaritutup, double tinggitutup, double tinggi, double jarijari) {
+        super(tinggi, jarijari);
         this.jarijaritutup = jarijaritutup;
         this.tinggitutup = tinggitutup;
-        this.sisitutup = sisitutup;
     }
     
-    @Override
-    public double volume() {
+    
+    public double volumeterpancung() {
         return super.volume() - 1/3*Math.PI*jarijaritutup*jarijaritutup*tinggitutup;
     }
 
-    @Override
-    public double luaspermukaan() {
+   
+    public double luaspermukaanterpancung() {
+        double sisitutup = Math.sqrt((jarijaritutup*jarijaritutup)+(tinggitutup*tinggitutup));
         return super.luaspermukaan() - Math.PI*jarijaritutup*sisitutup;
     }
 

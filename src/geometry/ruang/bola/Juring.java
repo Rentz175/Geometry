@@ -10,7 +10,7 @@ import geometry.ruang.MenghitungRuang;
  *
  * @author Febrian
  */
-public class Juring extends Bola implements MenghitungRuang{
+public class Juring extends Bola{
     private double tinggi;
     
     public Juring(double jarijari, double tinggi) {
@@ -18,9 +18,8 @@ public class Juring extends Bola implements MenghitungRuang{
         this.tinggi = tinggi;
     }
 
-    @Override
-    public double volume() {
-        return 2/3*super.luas()*tinggi;
+    public double volumejuring() {
+        return ((double)2/3)*super.luas()*tinggi;
     }
 
 //    @Override

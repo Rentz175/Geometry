@@ -12,22 +12,23 @@ import geometry.ruang.MenghitungRuang;
  * @author Febrian
  */
 public class Kerucut extends Lingkaran implements MenghitungRuang{
-    private double tinggi, sisi;
+    private double tinggi;
     
-    public Kerucut(double tinggi, double sisi, double jarijari) {
+    public Kerucut(double tinggi, double jarijari) {
         super(jarijari);
         this.tinggi = tinggi;
-        this.sisi = sisi;
+        
     }
     
     @Override
     public double volume() {
-        return 1/3*super.luas()*tinggi;
+        return ((double)1/3)*super.luas()*tinggi;
     }
 
     @Override
     public double luaspermukaan() {
+        
+        double sisi = Math.sqrt((jarijari*jarijari)+(tinggi*tinggi));
         return Math.PI*jarijari*sisi + super.luas();
     }
-    
 }

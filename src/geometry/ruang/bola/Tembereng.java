@@ -10,7 +10,7 @@ import geometry.ruang.MenghitungRuang;
  *
  * @author Febrian
  */
-public class Tembereng extends Bola implements MenghitungRuang {
+public class Tembereng extends Bola{
 
     private double tinggi;
     
@@ -18,13 +18,13 @@ public class Tembereng extends Bola implements MenghitungRuang {
         super(jarijari);
         this.tinggi = tinggi;
     }
-    @Override
-    public double volume() {
-       return 1/2*super.luas()*tinggi + 1/6*Math.PI*tinggi*tinggi*tinggi;
+//    @Override
+    public double volumeTemberng() {
+       return 0.5*super.luas()*tinggi + 1/6*Math.PI*tinggi*tinggi*tinggi;
     }
 
-    @Override
-    public double luaspermukaan() {
+//    @Override
+    public double luaspermukaanTemberng() {
         return super.keliling()*tinggi;
     }
     
